@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+       <div class="col-md-8 col-12 mt-3 mb-3 m-auto">
+
+            <a routerLink="" class="btn btn-success" class="float-start home-icon"><fa-icon [icon]="faHome"></fa-icon></a>
+            <h5 class="float-end">Add New Contact</h5>
+       </div>
+
+       <div class="col-md-8 col-12 mt-3 mb-3 m-auto">
+             <div class="profile">
+                      <fa-icon [icon]="faUserCircle"></fa-icon>
+                      <p> {{message}}</p>
+             </div>
+             
+       </div>
+       <div class="col-md-8 col-12 mt-3 mb-3 m-auto">
+        <div class="container">
+               <div class="row">
+                     <div class="col-md-8 m-auto">
+                             
+                        <form (ngSubmit)="createNewContact(myForms)" #myForms="ngForm">
+                              
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><fa-icon [icon]="faUser"></fa-icon> First Name</span>
+                                <input type="text" required pattern="[A-Za-z -]*" #first_name="ngModel"  class="form-control input-lg" placeholder="enter first Name" name="first_name" ngModel><br>
+                                <div class="error-message" *ngIf="first_name.touched && first_name.invalid" >
+                                    <span class="">First Name must be alphabets</span>
+                                </div>  
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><fa-icon [icon]="faUser"></fa-icon>Last Name</span>
+                                <input type="text" required pattern="[A-Za-z- ]*" class="form-control input-lg" #last_name="ngModel" placeholder="enter last Name" name="last_name" ngModel><br>
+                                <div class="error-message" *ngIf="last_name.touched && last_name.invalid">
+                                    <span class="">Last Name must be alphabets</span>
+                                </div>  
+                            </div>
+
+                            <div class="input-group mb-3">
+                                 <span class="input-group-text"><fa-icon [icon]="faPhoneAlt"></fa-icon> Telephone</span>
+                                <input type="text" required pattern="[0-9]{10,12}" #telephone="ngModel"   class="form-control input-lg" placeholder="enter telephone number" name="telephone" ngModel><br>
+                                <div class="error-message" *ngIf="telephone.touched && telephone.invalid">
+                                        <span class="">telephone required, and must be 10-12 digits</span>
+                                 </div>
+                            </div>
+                         <button type="submit" [disabled]="myForms.invalid" class="btn btn-info" style="color: #fff;text-transform:capitalize;border-radius:0px">add contact</button>
+
+                        </form>
+
+                     </div>
+                     
+               </div>
+        </div>
+    </div>
+</div>

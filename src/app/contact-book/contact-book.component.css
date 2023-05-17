@@ -1,13 +1,16 @@
 .titlebar{text-align: center;text-transform: uppercase;}
 .titlebar fa-icon{font-size:2.5em}
 .details{height:14vh;padding:5px 5px;border-bottom:1px solid #444;background-color: teal;}
-.details .details-info{width:95%;height: 6vh;}
+.details .details-info{width:90%;height: 6vh;}
 .details .details-info h5{color:#fff;text-transform: capitalize;}
 .details .details-info span{color:#f2f2f2}
 .usericon{width:10%;height:6vh;text-align: center;}
 .contact-details-info{width:90%;height:6vh;padding:10px 5px}
 .usericon fa-icon{font-size: 3.0em;color:#fff;margin-top:-8px}
-.details .delete-action{width:5%;height:6vh;}
-.trash{color:#fff}
+.details .edit-delete-action{width:10%;height:6vh;padding:10px 3px}
+.details .edit-delete-action .edit-action{width:5%;}
+.trash,.pen{color:#fff}
 
-.app-box{padding:90px 0px}
+.add-contact a.btn{border-radius: 0px;border:none;padding:10px}
+.search-contact{width:100%}
+.search-contact input{width:100%;padding:10px;border-radius: 0px;}

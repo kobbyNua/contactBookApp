@@ -1,0 +1,51 @@
+<div class="container">
+      <div class="row">
+        <div class="col-md-8 col-12 mt-3 mb-3 m-auto">
+              <a routerLink="" class="btn btn-success" title="click to home page"><fa-icon [icon]="faHome"></fa-icon></a>
+
+              <h3 class="float-end">Edit  Contact</h3>
+        </div>
+            <div class="col-md-8 col-12 mt-3 mb-3 m-auto">
+                  <div class="profile">
+                        
+                              <fa-icon [icon]="faUserCircle"></fa-icon>
+                              <h5><b>{{first_name}}  {{last_name}}</b></h5>
+                              <span>{{telephone}}</span>
+
+                              <p> {{message}}</p>
+                              
+                  </div>
+            </div>
+            <div class="col-md-8 col-12 mt-3 mb-3 m-auto">
+                <div class="container">
+                       <div class="row">
+                             <div class="col-md-8 m-auto">
+                                    
+                                          
+                                                 
+                                                 <form (ngSubmit)="editContactDetails(editForms)" #editForms="ngForm">
+                                                  <div class="input-group mb-3">
+                                                         <span class="input-group-text"><fa-icon [icon]="faUser"></fa-icon> First Name</span>
+                                                         <input type="text" class="form-control input-lg" placeholder="enter first Name" name="first_name" [(ngModel)]="first_name"  value="{{first_name}}" ngModel>
+                                                  </div>
+                                                  <div class="input-group mb-3">
+                                                    <span class="input-group-text"><fa-icon [icon]="faUser"></fa-icon>Last Name</span>
+                                                    <input type="text" class="form-control input-lg" placeholder="enter last Name" name="last_name" [(ngModel)]="last_name" value="{{last_name}}" ngModel>
+                                                  </div>  
+                                                  <div class="input-group mb-3">
+                                                    <span class="input-group-text"><fa-icon [icon]="faPhoneAlt"></fa-icon> Telephone</span>
+                                                    <input type="text" required pattern="[0-9]{10,12}" class="form-control input-lg" name="telephone" placeholder="enter telephone number" [(ngModel)]="telephone" value="{{telephone}}" ngModel>
+                                                  </div>
+                                                  <input type="hidden"   name="id" value="{{id}}" [(ngModel)]="id" ngModel>
+                                                  <button type="submit" class="btn btn-info">save</button> 
+                                                </form>                                     
+                                         
+                             </div>
+                       </div>
+
+                </div>
+            </div>
+      </div>
+</div>
+
+

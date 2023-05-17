@@ -1,0 +1,8 @@
+.profile{width:100%;background-color:teal;padding:45px 0px;text-align: center;}
+.profile fa-icon{font-size:8.0em;color:#fff}
+.profile h5{color:#fff;font-size:2.5em}
+.profile span{color:#f3f3f3}
+.profile p{color:#f3f3f3}
+input{padding:10px;border-radius: 5px;}
+.input-group-text{background-color: transparent !important;border-radius:0px;}
+button{border-radius: 0px;border: none;color:#fff;width:25%}

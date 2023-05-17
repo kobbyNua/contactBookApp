@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 mb-3 col-12 m-auto upper-body">
+               <!--<div class="add-contact float-start">
+                     <a routerLink="/new-contact" title="add contact page" class="btn btn-success">
+                           <fa-icon [icon]="faUser"></fa-icon>
+                     </a>
+                     <a routerLink="/">
+                          <fa-icon [icon]="faRefresh"></fa-icon>
+                     </a>
+               </div>-->
+               <div class="search-contact">
+                    <input type="text" (keyup)="searchContact(search)" placeholder="search by first name,last name or phone number" #search="ngModel" name="search" class="form-control" ngModel>
+               </div>
+        </div>
+        <div class="col-md-8 mt-3 mb-3 col-12 m-auto ">
+              <div class="contact-header float-start">
+                    <h4>Contacts</h4>
+              </div>
+              <div class="add-contact float-end">
+                    <a routerLink="/new-contact" title="add contact page" class="btn btn-success">
+                           <fa-icon [icon]="faUser"></fa-icon> Add Contact
+                     </a>
+              </div>
+      
+        </div>
+          <div class="container">
+            <div *ngFor="let contacts of contact_lists" class="row">
+                 <div class="col-md-8 col-12 m-auto details">
+                
+                    <div class="details-info float-start">
+                        <div class="usericon float-start">
+                           <fa-icon [icon]="faUserCircle"></fa-icon>
+                        </div>
+                        <div class="contact-details-info float-end">
+                           <h5>{{contacts.first_name}} {{contacts.last_name}}</h5>
+                           <span>{{contacts.telephone}}</span>
+                        </div>
+                 
+                </div>
+                <div class="edit-delete-action float-end">
+                      <div class="edit-action float-start">
+                        <a [routerLink]="['/edit-contact',contacts.id]" title="edit contact"><fa-icon  class="pen" [icon]="faPencilAlt">/</fa-icon></a>
+                      </div>
+                      <div class="delete-action float-end">
+                        <a (click)="deleteContact(contacts.id)" title="delete contact">
+                          <fa-icon  class="trash mb-4" [icon]="faTrash">/</fa-icon>
+                        </a>
+                        
+                      </div>
+                      
+                </div>
+
+
+                 </div>
+            </div>
+            
+          </div>
+    </div>
+</div>
