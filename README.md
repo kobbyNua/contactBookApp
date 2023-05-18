@@ -10,12 +10,19 @@ contactBookApp-master.zip
 #INSTALLATIONS
 ## xampp server
 download a [xampp server](https://www.apachefriends.org/) 
+after a successful download of xampp server install it your local machine; create a control panel on the desktop when xampp ask you if you want to create a control panel
+then open the control panel and start apache server and mysql server after a succesful server
 
 ## database creation
+open a web browser and enter 127.0.0.1/phpmyadmin or localhost/phpmyadmin to access mariadb intaerface
+on the phpmyadmin select **SQL** from the menu nav links after the **DATABASES** links
+
+When the **SQL** menu is clicked a panel is displayed to allow you enter sql command
 create database called contacts
 ```
   CREATE DATABASE contacts
 ```
+after typing the command click on the **GO** button to create the database
 ## python installation
 install the latest [python version](https://www.python.org/)
 
@@ -42,6 +49,7 @@ virtualenv env
  mkdir projects
  cd ./projects
 ```
+still the command prompt you opened
 ## install django latest version 
 ```
 pip install django
@@ -69,7 +77,7 @@ pip install django-filter
 ## extract the contactBookApp-main.zip
  in the contactBookApp-main folder copy the contractproject folder which contains two folders (contactproject and contactsApp) and a file (manage.py) and paste into the projects folder you created
  
- the change directory into the contractproject 
+ After copying the contractproject into you project directory, the cd into the contractproject 
  ```
   cd ./contractproject
  ```
@@ -116,4 +124,4 @@ pip install django-filter
  ```
 run localhost:4200 in the browser when the server is working
 
-# N.B when data is added for the first time it might delay to appear on the browser so just refresh the page to the results
+# N.B when data is added for the first time it might delay to appear on the browser so just refresh the page to the results and also don't close the xampp control panel or stop apache and mysql on the xampp control panel while running the django app
