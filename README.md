@@ -110,9 +110,13 @@ pip install django-filter
  ```
  npm install -g @angular/cli
  ```
- #extract contactBookApp-master copy it content paste it into a new  folder callend frontend
-  change directory into the frontend folder
-  ``` cd ./frontend
+ create a folder on your desktop and name it **frontend** or any name you wish to name it
+ #extract contactBookApp-master.zip; copy its content and paste its content into the frontend folder or the folder you created
+ 
+ #change directory into the frontend folder
+  
+  ``` 
+     cd ./frontend
   ```
   run npm intall to download node modules
   ```
@@ -122,6 +126,8 @@ pip install django-filter
  ```
    ng serve --open
  ```
-run localhost:4200 in the browser when the server is working
+ after a succesfull compilation the app is run on localhost:42000
 
-# N.B when data is added for the first time it might delay to appear on the browser so just refresh the page to the results and also don't close the xampp control panel or stop apache and mysql on the xampp control panel while running the django app
+ # run localhost:4200 in the browser to access the app
+
+# N.B when data is added for the first time it might delay to appear on the browser so just refresh the page to see the results and also don't close the xampp control panel or stop apache and mysql on the xampp control panel while running the django app
