@@ -114,3 +114,6 @@ pip install django-filter
  ```
    ng serve --open
  ```
+run localhost:4200 in the browser when the server is working
+
+# N.B when data is added for the first time it might delay to appear on the browser so just refresh the page to the results
